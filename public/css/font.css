@@ -1,0 +1,9 @@
+<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>@font-face {
+  font-family: "applec";
+  src: url(font/applec.ttf");
+}
+ 
+.a {
+  font-size: 11px;
+  font-family: "AdobeHeitiStd-Regular";
+}

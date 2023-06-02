@@ -1,0 +1,9 @@
+@font-face {
+  font-family: "applec";
+  src: url(font/applec.ttf");
+}
+ 
+.a {
+  font-size: 11px;
+  font-family: "AdobeHeitiStd-Regular";
+}
