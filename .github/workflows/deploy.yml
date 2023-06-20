@@ -14,7 +14,7 @@ jobs:
       - name: Checkout source
         uses: actions/checkout@v2
         with:
-          ref: master
+          ref: main
 
       - name: Setup Node.js
         uses: actions/setup-node@v1
@@ -23,54 +23,15 @@ jobs:
 
       - name: Setup Hexo
         env:
-          ACTION_DEPLOY_KEY: ${{-----BEGIN OPENSSH PRIVATE KEY-----
-b3BlbnNzaC1rZXktdjEAAAAACmFlczI1Ni1jdHIAAAAGYmNyeXB0AAAAGAAAABB/WfhbiL
-BG0f0CxYrx6QVwAAAAEAAAAAEAAAGXAAAAB3NzaC1yc2EAAAADAQABAAABgQC+DVCoINDY
-vIfKDDmos+Dp0bF38ZJ2BiylAtkGu6b92RRoB8o2/FyJgt8l1jdjXrLN8n/wCKazqomLsD
-ev5B3jStFDbtYoERxiE9vFUYjXbGiJoBetaZXLruGq0+ASBEg7eCJC7f3PLXckKx/ULCMH
-I9s8GOrGwQDus18P7yJTa7ngID6GEs4Xr5iGkhm5LDgDK831JPwmri3ptsA4eEqYHq9tST
-DAjK4qzrqg8l2xYQXAfFymIFbS8lP1Umh+tCjoGJePerp/Buy1s9kqhwGj2h6l4CAkh6Ek
-y9a6/W3aPEUwn1d24ooWCzTmW1H3RPRtVnTVplrtecM5Y6BYDR8kEI24EzNqByc/6a/5pa
-SyL9xly/3vK7UbgqbOT6GNUZSLympDXAPHbhIcopHjTyrbeox39BXcIcCmbhEe4zlwc6j9
-qlAfnUYTupXFf6ZPId+iagOYfcWustuYPVqWAmrJzgmCoo0tg/8NyT/X8eoFiw8prqZNCL
-EI2x9meNkFEbMAAAWQT1le+1lro3MgBYSealBtCygiRWbLODB5gDcmFtx/+ox85mtUBu4Q
-eACP5w+XCS5TVEvR40UYw3Q0mnuHu+KQo2PEMmfs/vNeDm+IYpwy1EXr0wapldt894njpl
-ya1DaslNDDN5wLV5xSViwCljYWeBxns09XZZ04TmWjr9aR0jzPlX743kTS0cZvTOrItLoY
-F1QzK/h0dZRY1pQVSCXjpi9F+JwN6P532KTnIRDdONUvodVkLkD6psr4VHmK0GXBlTlhfY
-YXz1SuWYVnat4mfv704DE0Wna7S9O4aD8g1pkUeuHvryhnBHl5p3vzzUFE1PFkSYFLsA15
-znOb61RwqPNbuVu8k4k7QARZW7jQn9R587DWGtmfqTnf34xq/qVF8LTqh/l/kguBkAVuVQ
-HCYL/xuSHzV+BcDWlFYEzRaSAyW8EXOwZD8uKdQnSoPk6RFveCvvkEfh1pvQ35om+8qbRh
-Z7Os/qEh+G2Vj1c5xgGxbFcGgmPjwelrjDfD4gykY2115t/QKsMchnOXlKegZiEp0FHcT6
-fmHpCpxwyW41KqhF7hTOaxaeiPAvHWyJSgjLRhGZsgIMOraeODLXcSlqwBSt0aQVd8i0Qi
-b/XmfhJnLCfXSOfenbF1SZTZkw8Q4Iz9CrJ7rcuE/i3pmcnJgOWHS1oxw5JC+BMvO5tGHm
-OjG/TRRXDB7aSJfegOM9LW2PH/CpOxqEGBw/lVDlHpSXW9QcWcB4y7SnV/fuQToN+iqUeH
-/LjE3vpJ8tGwUOx/+73bGK99IC8rTR1g4v0IKjJnBgU9kKxoB2RZxqGo4CNMVD/rg747ma
-wuqqNGrmXS9H1ygJflwEAxT1BI2cncFgH4vWtpxJ+c9Dd6mOuIVhe/WnXOxPn9JLD1iX5a
-8Gfh0hyaWZP1TZ2vwet9s6VFX1C6YSamtBpkPzhax4nqdCaj5wjBVJKarOs+eHo3RPMUDU
-hgiOz7IwSoqRJk5YEbq1cLtS2titMVl8+aaIq70rZASqgWLtp3igQb0BtgxJ7GtZm/qR03
-wYQT+kRlClKwuU8J99rfwVJncq2SWTNPPDwcfLheNe2598PS63L1cX5nwWUUku0OCnXNbB
-rs5b4Xg8HbGKG/cVKI9S7Zz7RmbrJO4PDobRHFVQ4bnZDOEiMgXFz1J+kJ/XorMEVXLglg
-281xHj/rlU+8GafzgCN0oAytFR33XVCnq9hl3HvvRKxTKTd9tXyIMeXjvcpqWcEo35RKpg
-p1TgbbP1X3Ly3TGonYjViglZZKXFHl00VXBVduvYfXeFfLJ7sAMiUbT/FS2jUE7L10X/nF
-ZUlmiB7MYV9Ysc0F927Fxtz5so/eUZIGjeQ0kDq/UYWsgyzbs1YY7VC7Y2yOi1uXR3AEkG
-9Uz9lHJYgQASq7MRV26qoNEnc4/bq/aZLv3rnW9qyhP5JnlHpdxoJkXS5OhrZCovYPG4uE
-YurNt573vTd3kgS9WbopkRPJZdh2mYaJF4twBg3q8C4r3cD39nfQK66z+2WCdIvSGMqssf
-1JWLZob8omyqVRJBCsRXaAl1O4SM4XRv6KZjxxSsAUja31ZpuoYzLcBcdvGwMzaequOH6Z
-Q8GX6x0KoiN9iQ4wwOeErrzrb9C8Oaw1N1I6vwIKdOLSrpX3YmoZM5ukUvXjtkYRtKPsjz
-Sj1dr3TUh/ujAZ6qlT7/W2bB0i+dwRpyu5Dtpr8JEDeN86s+t+GQtLs+qymAry7vkdW1Gv
-Ys9w5W+Ujvrp16eCSFiI13UQcJ+m8W+LTFHmgnUWuHq0BGOM7g7/lg8TPL6Dyj24FYog8p
-BjvijmqvcLY4yUCHxsLz40hyyVviNRi/ot+NdGMrrifUoY3kv/Cw/9enA/nTGPt2/FsQkI
-BQL1b7m+dF//fhx/jOIdJCkIDRM=
------END OPENSSH PRIVATE KEY-----
-}}
+          ACTION_DEPLOY_KEY: ${{ secrets.HEXO_DEPLOY_KEY }}
         run: |
           mkdir -p ~/.ssh/
           echo "$ACTION_DEPLOY_KEY" > ~/.ssh/id_rsa
           chmod 700 ~/.ssh
           chmod 600 ~/.ssh/id_rsa
           ssh-keyscan github.com >> ~/.ssh/known_hosts
-          git config --global user.email "zhuguojin2011win@163.com"
-          git config --global user.name "zhuzhu"
+          git config --global user.email "john@doe.com"
+          git config --global user.name "John Doe"
           npm install hexo-cli -g
           npm install
 
